@@ -1,0 +1,204 @@
+﻿Diagnose log at 2025-06-04T11:25:52Z
+
+AppPath: C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\bin\
+Version: 2.6.1+786ab03440ddc82e807a97c0e540f5247e44cec6
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 19045)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\ALUMNO
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DESKTOP-704CK1V
+MSYSTEM=MINGW64
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\ALUMNO\OneDrive
+TMPDIR=C:\Users\ALUMNO\AppData\Local\Temp
+ProgramFiles(x86)=C:\Program Files (x86)
+CONFIG_SITE=C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/config.site
+LC_CTYPE=es_ES.UTF-8
+USERDOMAIN=DESKTOP-704CK1V
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+ORIGINAL_TEMP=C:/Users/ALUMNO/AppData/Local/Temp
+MINGW_PREFIX=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64
+GIT_EXEC_PATH=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64/libexec/git-core
+ACLOCAL_PATH=C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\share\aclocal;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\share\aclocal
+TEMP=C:\Users\ALUMNO\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\ALUMNO\AppData\Local
+MANPATH=C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\local\man;C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\share\man;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\local\man;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\share\man;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\man;C:\Users\ALUMNO\AppData\Local\Programs\Git\share\man
+TERM=xterm
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+MSYSTEM_CARCH=x86_64
+PROGRAMFILES=C:\Program Files (x86)
+ProgramData=C:\ProgramData
+TERM_PROGRAM_VERSION=3.7.7
+ORIGINAL_TMP=C:/Users/ALUMNO/AppData/Local/Temp
+PROCESSOR_REVISION=5e03
+SYSTEMROOT=C:\Windows
+TERM_PROGRAM=mintty
+PROCESSOR_LEVEL=6
+NUMBER_OF_PROCESSORS=4
+SSH_ASKPASS=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64/bin/git-askpass.exe
+SHLVL=1
+APPDATA=C:\Users\ALUMNO\AppData\Roaming
+SYSTEMDRIVE=C:
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+HOSTNAME=DESKTOP-704CK1V
+PKG_CONFIG_PATH=C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\lib\pkgconfig;C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\share\pkgconfig
+MSYSTEM_CHOST=x86_64-w64-mingw32
+WINDIR=C:\Windows
+PLINK_PROTOCOL=ssh
+INFOPATH=C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\local\info;C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\share\info;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\local\info;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\share\info;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\info;C:\Users\ALUMNO\AppData\Local\Programs\Git\share\info
+ProgramW6432=C:\Program Files
+PATH=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64/libexec/git-core;C:\Users\ALUMNO\bin;C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\bin;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\local\bin;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\bin;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\bin;C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\bin;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\bin;C:\Users\ALUMNO\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python312\Scripts;C:\Python312;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Users\ALUMNO\AppData\Local\Programs\Python\Launcher;C:\Users\ALUMNO\AppData\Local\Microsoft\WindowsApps;C:\Users\ALUMNO\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.2.3\bin;C:\Users\ALUMNO\AppData\Roaming\npm;C:\Users\ALUMNO\AppData\Local\Programs\VSCodium\bin;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\bin\vendor_perl;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\bin\core_perl
+ChocolateyInstall=C:\ProgramData\chocolatey
+GIT_TRACE2_PARENT_SID=75fa851b-f0cb-4e50-914b-ada523d1e7ec
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64/lib
+IntelliJ IDEA Community Edition=C:\Users\ALUMNO\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.2.3\bin;
+TMP=C:\Users\ALUMNO\AppData\Local\Temp
+__COMPAT_LAYER=DetectorsAppHealth
+SHELL=C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\bin\bash.exe
+HOME=C:\Users\ALUMNO
+COMSPEC=C:\Windows\system32\cmd.exe
+ZES_ENABLE_SYSMAN=1
+LOGONSERVER=\\DESKTOP-704CK1V
+USERPROFILE=C:\Users\ALUMNO
+DISPLAY=needs-to-be-defined
+COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-704CK1V
+CommonProgramW6432=C:\Program Files\Common Files
+HOMEDRIVE=C:
+MSYSTEM_PREFIX=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64
+OLDPWD=C:/Users/ALUMNO/Downloads
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+SESSIONNAME=Console
+PWD=C:/Users/ALUMNO/Downloads/atrapados-master
+EXEPATH=C:\Users\ALUMNO\AppData\Local\Programs\Git
+USERNAME=ALUMNO
+PROCESSOR_ARCHITEW6432=AMD64
+ORIGINAL_PATH=C:\Users\ALUMNO\AppData\Local\Programs\Git\mingw64\bin;C:\Users\ALUMNO\AppData\Local\Programs\Git\usr\bin;C:\Users\ALUMNO\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python312\Scripts;C:\Python312;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Users\ALUMNO\AppData\Local\Programs\Python\Launcher;C:\Users\ALUMNO\AppData\Local\Microsoft\WindowsApps;C:\Users\ALUMNO\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.2.3\bin;C:\Users\ALUMNO\AppData\Roaming\npm;C:\Users\ALUMNO\AppData\Local\Programs\VSCodium\bin
+PROCESSOR_ARCHITECTURE=x86
+PS1=\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ 
+OS=Windows_NT
+VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\
+MINGW_CHOST=x86_64-w64-mingw32
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64/include
+_=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64/bin/git
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\ALUMNO\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\ALUMNO\AppData\Local\Temp\01f74e11a3682de12fbf85d1'... OK
+Reading from temporary file 'C:\Users\ALUMNO\AppData\Local\Temp\01f74e11a3682de12fbf85d1'... OK
+Deleting temporary file 'C:\Users\ALUMNO\AppData\Local\Temp\01f74e11a3682de12fbf85d1'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\ALUMNO
+UserDataDirectoryPath: C:\Users\ALUMNO\.gcm
+GetCurrentDirectory(): C:\Users\ALUMNO\Downloads\atrapados-master
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:52203/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.49.0.windows.1'
+Locating current repository...Git repository at 'C:/Users/ALUMNO/Downloads/atrapados-master/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	http.sslcainfo=C:/Users/ALUMNO/AppData/Local/Programs/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	core.fscache=true
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	core.symlinks=false
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	pull.rebase=false
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	credential.helper=manager
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Users/ALUMNO/AppData/Local/Programs/Git/etc/gitconfig	init.defaultbranch=master
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/danii485/atrapados.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	user.name=Juan15200312
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\ALUMNO\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\ALUMNO\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
