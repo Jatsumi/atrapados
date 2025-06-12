@@ -13,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.TimeUtils;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
 import io.github.some_example_name.Main;
@@ -31,6 +32,8 @@ public class Nivel2Multijugador implements Screen {
     private float anchoPantalla, altoPantalla;
     private boolean jugador1Muerto;
     private boolean jugador2Muerto;
+    private long tiempoMuerteJugador1;
+    private long tiempoMuerteJugador2;
     private boolean mostrandoMensaje;
     private boolean juegoPausado;
 
@@ -56,6 +59,8 @@ public class Nivel2Multijugador implements Screen {
 
         jugador1Muerto = false;
         jugador2Muerto = false;
+        tiempoMuerteJugador1 = 0;
+        tiempoMuerteJugador2 = 0;
         mostrandoMensaje = false;
 
         bolas = new Array<>();
@@ -88,24 +93,35 @@ public class Nivel2Multijugador implements Screen {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
+        long ahora = TimeUtils.nanoTime();
+
         if (!juegoPausado) {
-            if (!jugador1Muerto) jugador.actualizar(delta);
-            if (!jugador2Muerto) jugador2.actualizar(delta);
+            if (!jugador1Muerto) {
+                jugador.actualizar(delta);
+            } else if (TimeUtils.timeSinceNanos(tiempoMuerteJugador1) > 5_000_000_000L) {
+                jugador1Muerto = false;
+                jugador.resetearPosicion();
+            }
+
+            if (!jugador2Muerto) {
+                jugador2.actualizar(delta);
+            } else if (TimeUtils.timeSinceNanos(tiempoMuerteJugador2) > 5_000_000_000L) {
+                jugador2Muerto = false;
+                jugador2.resetearPosicion();
+            }
 
             for (BolaEnemiga bola : bolas) {
                 bola.actualizar(delta);
 
                 if (!jugador1Muerto && jugador.getHitbox().overlaps(bola.getHitbox())) {
                     jugador1Muerto = true;
+                    tiempoMuerteJugador1 = TimeUtils.nanoTime();
                 }
 
                 if (!jugador2Muerto && jugador2.getHitbox().overlaps(bola.getHitbox())) {
                     jugador2Muerto = true;
+                    tiempoMuerteJugador2 = TimeUtils.nanoTime();
                 }
-            }
-
-            if (jugador1Muerto && jugador2Muerto) {
-                juegoPausado = true;
             }
 
             boolean jugador1EnMeta = !jugador1Muerto &&
@@ -141,7 +157,9 @@ public class Nivel2Multijugador implements Screen {
             }
         }
 
-        if (jugador1Muerto && jugador2Muerto) {
+        if (jugador1Muerto && jugador2Muerto &&
+            TimeUtils.timeSinceNanos(tiempoMuerteJugador1) > 5_000_000_000L &&
+            TimeUtils.timeSinceNanos(tiempoMuerteJugador2) > 5_000_000_000L) {
             game.getFont().setColor(Color.BLACK);
             game.getFont().draw(batch, "¡Perdieron! Presionen ENTER para reiniciar", anchoPantalla / 2 - 150, altoPantalla / 2 + 25);
             if (Gdx.input.isKeyJustPressed(Input.Keys.ENTER)) {
