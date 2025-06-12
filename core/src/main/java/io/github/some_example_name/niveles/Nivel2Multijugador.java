@@ -59,9 +59,9 @@ public class Nivel2Multijugador implements Screen {
         mostrandoMensaje = false;
 
         bolas = new Array<>();
-        for (int i = 0; i < 6; i++) {  // AUMENTA LA DIFICULTAD: 6 bolas
+        for (int i = 0; i < 6; i++) {
             BolaEnemiga bola = new BolaEnemiga(anchoPantalla, altoPantalla);
-            bola.setVelocidadExtra(1.5f);  // Opcional: más rápido que en Nivel 1
+            bola.setVelocidadExtra(1.5f);
             bolas.add(bola);
         }
 
@@ -133,12 +133,11 @@ public class Nivel2Multijugador implements Screen {
 
         if (mostrandoMensaje) {
             game.getFont().setColor(Color.BLACK);
-            game.getFont().draw(batch, "¡Ganaron el Nivel 2! Presionen ENTER", anchoPantalla / 2 - 100, altoPantalla / 2);
+            game.getFont().draw(batch, "¡Ganaron el Nivel 2! Presionen ENTER", anchoPantalla / 2 - 130, altoPantalla / 2 + 20);
+            game.getFont().draw(batch, "¡Has completado el Nivel 2! ¡Te queda poco!", anchoPantalla / 2 - 150, altoPantalla / 2 - 10);
             if (Gdx.input.isKeyJustPressed(Input.Keys.ENTER)) {
                 game.addScore(200);
-                // Aquí puedes llevarlos a un siguiente nivel si existe:
-                // game.setScreen(new Nivel3Multijugador(game));
-                game.setScreen(new MenuScreen(game));  // Por ahora vuelve al menú
+                game.setScreen(new MenuScreen(game));
             }
         }
 
@@ -177,4 +176,3 @@ public class Nivel2Multijugador implements Screen {
     @Override public void resume() {}
     @Override public void hide() {}
 }
-
