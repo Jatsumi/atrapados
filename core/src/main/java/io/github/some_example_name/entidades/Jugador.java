@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 
-
 public class Jugador {
     private Texture textura;
     private float x, y;
@@ -22,7 +21,7 @@ public class Jugador {
         this.pantallaAncho = pantallaAncho;
         this.pantallaAlto = pantallaAlto;
         this.x = 0;
-        this.y = (pantallaAlto - ALTO)/2f;
+        this.y = (pantallaAlto - ALTO) / 2f;
         this.velocidad = 200;
         this.hitbox = new Rectangle(x, y, ANCHO, ALTO);
     }
@@ -47,14 +46,21 @@ public class Jugador {
         hitbox.setPosition(x, y);
     }
 
-    public void guardarPosicionAnterior(){
+    public void guardarPosicionAnterior() {
         prevX = x;
         prevY = y;
     }
-    public void retrocederPosicionAnterior(){
+
+    public void retrocederPosicionAnterior() {
         x = prevX;
         y = prevY;
-        hitbox.setPosition(x,y);
+        hitbox.setPosition(x, y);
+    }
+
+    public void resetearPosicion() {
+        this.x = 0;
+        this.y = (pantallaAlto - ALTO) / 2f;
+        hitbox.setPosition(x, y);
     }
 
     public void renderizar(SpriteBatch batch) {

@@ -34,6 +34,10 @@ public class Nivel1Multijugador implements Screen {
     private boolean mostrandoMensaje;
     private boolean juegoPausado;
 
+    private float tiempoMuerteJugador1;
+    private float tiempoMuerteJugador2;
+    private final float TIEMPO_RESPAWN = 5f;
+
     private Stage stage;
     private Skin skin;
     private TextButton menuButton;
@@ -58,6 +62,9 @@ public class Nivel1Multijugador implements Screen {
         jugador2Muerto = false;
         mostrandoMensaje = false;
 
+        tiempoMuerteJugador1 = 0;
+        tiempoMuerteJugador2 = 0;
+
         bolas = new Array<>();
         for (int i = 0; i < 3; i++) {
             BolaEnemiga bola = new BolaEnemiga(anchoPantalla, altoPantalla);
@@ -65,9 +72,8 @@ public class Nivel1Multijugador implements Screen {
             bolas.add(bola);
         }
 
-        // 🎮 UI Stage y botón
         stage = new Stage(new ScreenViewport());
-        Gdx.input.setInputProcessor(stage);  // ¡Importante!
+        Gdx.input.setInputProcessor(stage);
 
         skin = new Skin(Gdx.files.internal("uiskin.json"));
 
@@ -98,15 +104,30 @@ public class Nivel1Multijugador implements Screen {
 
                 if (!jugador1Muerto && jugador.getHitbox().overlaps(bola.getHitbox())) {
                     jugador1Muerto = true;
+                    tiempoMuerteJugador1 = 0;
                 }
 
                 if (!jugador2Muerto && jugador2.getHitbox().overlaps(bola.getHitbox())) {
                     jugador2Muerto = true;
+                    tiempoMuerteJugador2 = 0;
                 }
             }
 
-            if (jugador1Muerto && jugador2Muerto) {
-                juegoPausado = true;
+            // Manejar respawn
+            if (jugador1Muerto) {
+                tiempoMuerteJugador1 += delta;
+                if (tiempoMuerteJugador1 >= TIEMPO_RESPAWN) {
+                    jugador1Muerto = false;
+                    jugador.resetearPosicion();
+                }
+            }
+
+            if (jugador2Muerto) {
+                tiempoMuerteJugador2 += delta;
+                if (tiempoMuerteJugador2 >= TIEMPO_RESPAWN) {
+                    jugador2Muerto = false;
+                    jugador2.resetearPosicion();
+                }
             }
 
             boolean jugador1EnMeta = !jugador1Muerto &&
@@ -141,26 +162,15 @@ public class Nivel1Multijugador implements Screen {
             }
         }
 
-        if (jugador1Muerto && jugador2Muerto) {
-            game.getFont().setColor(Color.BLACK);
-            game.getFont().draw(batch, "¡Perdieron! Presionen ENTER para reiniciar", anchoPantalla / 2 - 150, altoPantalla / 2 + 25);
-            if (Gdx.input.isKeyJustPressed(Input.Keys.ENTER)) {
-                game.addScore(-50);
-                game.setScreen(new Nivel1Multijugador(game));
-            }
-        }
-
         game.getFont().setColor(Color.WHITE);
         game.getFont().draw(batch, "Score: " + game.getScore(), 10, altoPantalla - 10);
         batch.end();
 
-        // 👇 Dibujar UI
         stage.act(delta);
         stage.draw();
     }
 
-    @Override
-    public void dispose() {
+    @Override public void dispose() {
         batch.dispose();
         fondo.dispose();
         jugador.dispose();
@@ -173,6 +183,7 @@ public class Nivel1Multijugador implements Screen {
     @Override public void resize(int width, int height) {
         stage.getViewport().update(width, height, true);
     }
+
     @Override public void pause() {}
     @Override public void resume() {}
     @Override public void hide() {}
