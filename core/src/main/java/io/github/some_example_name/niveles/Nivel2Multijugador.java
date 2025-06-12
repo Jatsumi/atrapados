@@ -54,8 +54,12 @@ public class Nivel2Multijugador implements Screen {
         altoPantalla = Gdx.graphics.getHeight();
 
         jugador = new Jugador(anchoPantalla, altoPantalla);
+        jugador.getHitbox().x = 50;
+        jugador.getHitbox().y = altoPantalla / 2;
+
         jugador2 = new Jugador2(anchoPantalla, altoPantalla);
         jugador2.getHitbox().x = 100;
+        jugador2.getHitbox().y = altoPantalla / 2; // ← CORREGIDO PARA QUE SE VEA
 
         jugador1Muerto = false;
         jugador2Muerto = false;
@@ -190,6 +194,7 @@ public class Nivel2Multijugador implements Screen {
     @Override public void resize(int width, int height) {
         stage.getViewport().update(width, height, true);
     }
+
     @Override public void pause() {}
     @Override public void resume() {}
     @Override public void hide() {}
