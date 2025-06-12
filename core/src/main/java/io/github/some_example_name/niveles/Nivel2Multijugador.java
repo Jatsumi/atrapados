@@ -153,8 +153,15 @@ public class Nivel2Multijugador implements Screen {
 
         if (mostrandoMensaje) {
             game.getFont().setColor(Color.BLACK);
+
+            // Texto destacado en tamaño más grande
+            game.getFont().getData().setScale(2.0f);
+            game.getFont().draw(batch, "¡Enhorabuena! Has Ganado!", anchoPantalla / 2 - 180, altoPantalla / 2 + 80);
+            game.getFont().getData().setScale(1.0f);
+
             game.getFont().draw(batch, "¡Ganaron el Nivel 2! Presionen ENTER", anchoPantalla / 2 - 130, altoPantalla / 2 + 20);
             game.getFont().draw(batch, "¡Has completado el Nivel 2! ¡Te queda poco!", anchoPantalla / 2 - 150, altoPantalla / 2 - 10);
+
             if (Gdx.input.isKeyJustPressed(Input.Keys.ENTER)) {
                 game.addScore(200);
                 game.setScreen(new MenuScreen(game));
